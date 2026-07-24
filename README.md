@@ -2,20 +2,16 @@
 A compilation of Apple's SF Symbols in `.svg` format.
 
 ## Current coverage
-This repository now includes exports generated from the latest SF Symbols release line (SF Symbols 7), using the symbol metadata bundled in the installed app.
+This repository includes all 6,404 symbols from the latest SF Symbols release (SF Symbols 7 / app version 26.x), exported using the symbol metadata bundled in the installed SF Symbols app.
 
 ## How symbols are generated
-The original README referenced a fork of a deprecated CLI that is no longer available. This repo now includes a local generator script:
-
-- `/Users/brendanballon/Documents/sfsymbols-svg/scripts/export_sf_symbols.swift`
-
-The script reads these files from the installed SF Symbols app bundle:
+The original export relied on a fork of a now-deprecated CLI. This repo now includes a local generator script, `scripts/export_sf_symbols.swift`, which reads these files from the installed SF Symbols app bundle:
 
 - `symbol_names.txt`
 - `symbol_chars.txt`
 - `SF-Pro.ttf` (fallback: `SFSymbolsFallback.ttf`)
 
-and writes one SVG per symbol to `/Users/brendanballon/Documents/sfsymbols-svg/symbols`.
+and writes one SVG per symbol to `symbols/`.
 
 ## Regenerate symbols
 ```sh
